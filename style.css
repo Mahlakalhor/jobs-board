@@ -21,64 +21,70 @@ main{
     display: grid;
 }
 .search{
-     background-color: rgba(241, 240, 246, 1);
+    background: rgba(241,240,246,1);
     height: 100px;
-    grid-area: search ;
+    grid-area: search;
     border-radius: 8px;
-    padding: 8px;
+    padding: 16px 24px;
+
+    display: flex;         
+    align-items: center;
+    gap: 12px;                 
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 .search-box{
     display: flex;
     align-items: center;
     background: #fff;
     border: 1px solid rgba(33,33,33,0.25);
     border-radius: 16px;
-    width: 570px;              
+    margin-right: 26px;
     height: 50px;
     padding: 0 12px;
-}
-.search-item1{ 
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: rgba(33,33,33,0.6);
-  font-size: 17px;
-  flex: 1;                    
+    width: 570px;
 }
 
+.search-item1,
 .search-item2{
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: rgba(33,33,33,0.6);
-  font-size: 17px;
-  padding: 6px 10px;
-  border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(33,33,33,0.6);
+    font-size: 17px;
 }
-.search-item2{
-  padding: 6px 10px;
-  border-radius: 12px;
-}
-.search-btn{
-  height: 50px;
-  min-width: 130px;
-  padding: 0 20px;
-  display: inline-flex;        
-  align-items: center;
-  justify-content: center;
-  border-radius: 16px;
-  background: rgba(255, 96, 163, 1);
-  color: #fff;
-  font-weight: 600;
-}
+.search-item1{ flex: 1; }  
+
+.search-box svg{ display:block; }
+.search-item1 span,
+.search-item2 span{ margin:0; padding:0; line-height:1; }
+
 .divider{
     width: 1px;
-    height: 60%;
+    align-self: stretch;         
     background: rgba(33,33,33,0.15);
-    margin: 0 12px;
+    margin: 0 8px;
     border-radius: 1px;
 }
+
+.search-btn{
+    height: 50px;
+    min-width: 130px;
+    padding: 0 32px;
+    display: inline-flex;        
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(255, 96, 163, 1);
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    margin-left: 26px;
+    margin-right: 24px;
+}
+
 .board{
     background-color: rgba(241, 240, 246, 1);
     grid-area: board ;
@@ -126,7 +132,7 @@ p{
 }
 .box-item2{
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap:wrap;
     gap: 8px;            
     margin-top: 16px;
     justify-content: flex-start;
